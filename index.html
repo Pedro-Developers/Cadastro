@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Formulário de Cadastro</h1>
+        <div class="conteudo">
+            <form id="cadastroForm" novalidate>
+                <label for="nome">Nome completo</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+
+                <label for="email">E-mail institucional</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Mínimo de 6 caracteres" minlength="6" required>
+
+                <label for="confirmaSenha">Confirmar senha</label>
+                <input type="password" name="confirmaSenha" id="confirmaSenha" placeholder="Digite a senha novamente" required>
+
+                <label for="perfil">Perfil técnico</label>
+                <select name="perfil" id="perfil" required>
+                    <option value="">Selecione uma área</option>
+                    <option value="Redes">Redes</option>
+                    <option value="Desenvolvimento">Desenvolvimento</option>
+                    <option value="Suporte">Suporte</option>
+                </select>
+
+                <label class="termos" for="termos">
+                    <input type="checkbox" name="termos" id="termos" required>
+                    Aceito os termos de uso
+                </label>
+
+                <p id="mensagem" class="mensagem" role="alert" aria-live="polite"></p>
+                <button type="submit">Cadastrar</button>
+            </form>
+
+            <section class="painel" aria-labelledby="tituloSaida">
+                <h2 id="tituloSaida">Dados cadastrados</h2>
+                <p><strong>Nome:</strong> <span id="saidaNome">—</span></p>
+                <p><strong>E-mail:</strong> <span id="saidaEmail">—</span></p>
+                <p><strong>Perfil técnico:</strong> <span id="saidaPerfil">—</span></p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

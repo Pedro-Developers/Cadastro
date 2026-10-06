@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 32px 16px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+form,
+.painel {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 8px;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    font: inherit;
+}
+
+.termos {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.termos input {
+    width: auto;
+}
+
+button {
+    border: 0;
+    border-radius: 4px;
+    background: #1769aa;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #125487;
+}
+
+.mensagem {
+    min-height: 1.6em;
+    color: #b42318;
+}
+
+.painel h2 {
+    margin-bottom: 12px;
+}
+
+@media (max-width: 640px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+    }
+}
